@@ -1,6 +1,6 @@
 x = input("Napiš číslo X\n")
 y = input("Napiš číslo Y\n")
-z = input("Vyber znaménko\n1. Sčítání\n2. Odečítání\n3. Násobení\n4. Dělení\n5. Mocnina\n6. Odmocnina")
+z = input("Vyber znaménko\n1. Sčítání\n2. Odečítání\n3. Násobení\n4. Dělení\n5. Mocnina\n6. Odmocnina\n")
 
 x = (int(x))
 y = (int(y))
@@ -18,9 +18,12 @@ elif z == "Násobení" or "3." or "3. Násobení" or "3" or "nasobeni":
     m = (str(m))
     print("Výsledek je " + m)
 elif z == "Dělení" or "4." or "4. Dělení" or "4" or "deleni":
-    m = (x / y)
-    m = (str(m))
-    print("Výsledek je " + m)
+    if y == 0:
+        print("y nesmí být 0")
+    else:
+        m = (x / y)
+        m = (str(m))
+        print("Výsledek je" + m)
 elif z == "Mocnina" or "5." or "5. Mocnina" or "5" or "mocnina":
     m = (x ** y)
     m = (str(m))
